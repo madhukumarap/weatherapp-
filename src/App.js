@@ -99,11 +99,20 @@ function GfGWeatherApp() {
 			}); 
 	}; 
 
-	useEffect(() => { 
-		if (input !== '') { 
-			searchForecast(); 
-		} 
-	}, [input]); 
+	useEffect(() => {
+		const handleKeyPress = (event) => {
+		  if (event.key === 'Enter' && input !== '') {
+			searchForecast();
+		  }
+		};
+	  
+		window.addEventListener('keydown', handleKeyPress);
+	  
+		return () => {
+		  window.removeEventListener('keydown', handleKeyPress);
+		};
+	  }, [input]);
+	  
  
  
   const getFiveDayForecast = () => {
