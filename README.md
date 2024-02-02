@@ -28,7 +28,8 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+### `deploy link` 
+"view the live https://ubiquitous-concha-1a1302.netlify.app "
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
